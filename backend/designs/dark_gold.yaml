@@ -1,0 +1,72 @@
+# Dark Gold Design Template
+# Темный дизайн с золотыми акцентами для премиального вида
+
+name: "Dark Gold"
+description: "Темный дизайн с золотыми акцентами для премиального и элегантного вида"
+category: "premium"
+
+fonts:
+  body: "Times-Roman" # Основной текст
+  title: "Times-Bold" # Заголовок документа
+  heading: "Times-Bold" # Заголовки разделов
+  body_size: 11
+  title_size: 17
+  heading_size: 13
+  body_leading: 13
+  title_leading: 19
+  heading_leading: 15
+
+colors:
+  text: "#E8E8E8" # Светло-серый для основного текста
+  title: "#FFD700" # Золотой для заголовка
+  heading: "#FFA500" # Оранжево-золотой для заголовков
+  background: "#1A1A1A" # Темный фон
+  accent: "#FFD700" # Золотой акцент
+
+margins:
+  left: 2.5
+  right: 2.5
+  top: 2.0
+  bottom: 2.0
+
+spacing:
+  paragraph: 6 # Отступ между параграфами
+  title: 14 # Отступ после заголовка документа
+  heading: 8 # Отступ после заголовков разделов
+  heading_before: 12 # Отступ перед заголовками разделов
+
+layout:
+  page_numbers: true
+  page_number_position: "bottom_right"
+  page_number_font: "Helvetica"
+  page_number_size: 9
+  page_number_color: "#FFD700"
+
+header:
+  enabled: false
+  text: ""
+  font: "Times-Bold"
+  size: 10
+  color: "#FFD700"
+
+footer:
+  enabled: true
+  text: "Бұл – Алланың Елшісі"
+  font: "Times-Italic"
+  size: 9
+  color: "#FFD700"
+  position: "center"
+
+decorative:
+  border_enabled: true
+  border_color: "#FFD700"
+  border_width: 2
+  corner_ornaments: true
+  arabic_patterns: false
+
+special_features:
+  - "Темный фон с золотыми акцентами"
+  - "Премиальный и элегантный вид"
+  - "Высокий контраст для читаемости"
+  - "Золотая рамка"
+  - "Подходит для особых изданий"

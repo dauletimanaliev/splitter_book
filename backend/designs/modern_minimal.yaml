@@ -1,0 +1,72 @@
+# Modern Minimal Design Template
+# Современный минималистичный дизайн с чистыми линиями
+
+name: "Modern Minimal"
+description: "Современный минималистичный дизайн с чистыми линиями и простой типографикой"
+category: "modern"
+
+fonts:
+  body: "Helvetica" # Основной текст
+  title: "Helvetica-Bold" # Заголовок документа
+  heading: "Helvetica-Bold" # Заголовки разделов
+  body_size: 11
+  title_size: 16
+  heading_size: 13
+  body_leading: 13
+  title_leading: 18
+  heading_leading: 15
+
+colors:
+  text: "#333333" # Темно-серый для основного текста
+  title: "#000000" # Черный для заголовка
+  heading: "#666666" # Серый для заголовков
+  background: "#FFFFFF" # Белый фон
+  accent: "#007ACC" # Синий акцент
+
+margins:
+  left: 2.0
+  right: 2.0
+  top: 2.5
+  bottom: 2.5
+
+spacing:
+  paragraph: 8 # Отступ между параграфами
+  title: 16 # Отступ после заголовка документа
+  heading: 10 # Отступ после заголовков разделов
+  heading_before: 16 # Отступ перед заголовками разделов
+
+layout:
+  page_numbers: true
+  page_number_position: "bottom_center"
+  page_number_font: "Helvetica"
+  page_number_size: 9
+  page_number_color: "#999999"
+
+header:
+  enabled: false
+  text: ""
+  font: "Helvetica"
+  size: 9
+  color: "#666666"
+
+footer:
+  enabled: false
+  text: ""
+  font: "Helvetica"
+  size: 9
+  color: "#999999"
+  position: "center"
+
+decorative:
+  border_enabled: false
+  border_color: "#E0E0E0"
+  border_width: 1
+  corner_ornaments: false
+  arabic_patterns: false
+
+special_features:
+  - "Чистые линии и минимализм"
+  - "Современная типографика"
+  - "Максимальная читаемость"
+  - "Профессиональный вид"
+  - "Подходит для деловых документов"

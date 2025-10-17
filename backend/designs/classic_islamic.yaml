@@ -1,0 +1,72 @@
+# Classic Islamic Design Template
+# Традиционный исламский дизайн с золотыми акцентами и арабской типографикой
+
+name: "Classic"
+description: "Традиционный дизайн с золотыми акцентами и элегантной типографикой"
+category: "traditional"
+
+fonts:
+  body: "Times-Roman" # Основной текст
+  title: "Times-Bold" # Заголовок документа
+  heading: "Times-Bold" # Заголовки разделов
+  body_size: 12
+  title_size: 18
+  heading_size: 14
+  body_leading: 14
+  title_leading: 20
+  heading_leading: 16
+
+colors:
+  text: "#2C2C2C" # Темно-серый для основного текста
+  title: "#8B4513" # Коричневый для заголовка
+  heading: "#B8860B" # Темно-золотой для заголовков
+  background: "#FFFFFF" # Белый фон
+  accent: "#DAA520" # Золотой акцент
+
+margins:
+  left: 2.5
+  right: 2.5
+  top: 2.0
+  bottom: 2.0
+
+spacing:
+  paragraph: 6 # Отступ между параграфами
+  title: 12 # Отступ после заголовка документа
+  heading: 8 # Отступ после заголовков разделов
+  heading_before: 12 # Отступ перед заголовками разделов
+
+layout:
+  page_numbers: true
+  page_number_position: "bottom_right"
+  page_number_font: "Helvetica"
+  page_number_size: 9
+  page_number_color: "#666666"
+
+header:
+  enabled: false
+  text: ""
+  font: "Times-Bold"
+  size: 10
+  color: "#8B4513"
+
+footer:
+  enabled: true
+  text: "Today reader, tomorrow leader"
+  font: "Times-Italic"
+  size: 9
+  color: "#8B4513"
+  position: "center"
+
+
+decorative:
+  border_enabled: false
+  border_color: "#DAA520"
+  border_width: 1
+  corner_ornaments: false
+  arabic_patterns: false
+
+special_features:
+  - "Золотые акценты в заголовках"
+  - "Традиционная исламская цветовая схема"
+  - "Элегантная типографика"
+  - "Подходящие отступы для чтения"

@@ -1,0 +1,25 @@
+FROM node:18-alpine
+
+# Создаем рабочую директорию
+WORKDIR /app
+
+# Копируем package.json и package-lock.json
+COPY frontend/package*.json ./
+
+# Устанавливаем зависимости
+RUN npm ci --only=production
+
+# Копируем исходный код
+COPY frontend/ .
+
+# Собираем приложение
+RUN npm run build
+
+# Устанавливаем serve для раздачи статических файлов
+RUN npm install -g serve
+
+# Открываем порт
+EXPOSE 3000
+
+# Запускаем приложение
+CMD ["serve", "-s", "build", "-l", "3000"]

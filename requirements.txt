@@ -1,0 +1,30 @@
+# AI Book Splitter & Designer - Backend Dependencies
+
+# Web Framework
+fastapi
+uvicorn[standard]
+python-multipart
+
+# PDF Processing
+PyMuPDF
+reportlab
+
+# Document Processing
+python-docx
+beautifulsoup4
+
+# Data Processing
+PyYAML
+
+# HTTP Client
+requests
+
+# File Handling
+aiofiles
+
+# Environment Variables
+python-dotenv
+
+# Validation
+pydantic
+
