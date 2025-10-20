@@ -1,1 +1,136 @@
-<!doctype html><html lang="kk"><head><meta charset="utf-8"/><link rel="icon" href="/favicon.ico"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="AI Book Splitter & Designer - Автоматическое разделение книг на разделы с красивым дизайном"/><link rel="apple-touch-icon" href="/logo192.png"/><link rel="manifest" href="/manifest.json"/><title>AI Book Splitter & Designer</title><script defer="defer" src="/static/js/main.89ce2683.js"></script><link href="/static/css/main.2dd706c5.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div></body></html>
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="AI Book Splitter & Designer - Автоматическое разделение книг на разделы с красивым дизайном" />
+    <title>AI Book Splitter & Designer</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.2em;
+        }
+        .features {
+            text-align: left;
+            margin: 30px 0;
+        }
+        .feature {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+        .feature-icon {
+            font-size: 1.5em;
+            margin-right: 15px;
+        }
+        .btn {
+            background: #007bff;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1em;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+        .btn-secondary {
+            background: #6c757d;
+        }
+        .btn-secondary:hover {
+            background: #545b62;
+        }
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            color: #856404;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🤖 AI Book Splitter & Designer</h1>
+        <p class="subtitle">Автоматическое разделение книг на разделы с красивым дизайном</p>
+        
+        <div class="features">
+            <div class="feature">
+                <span class="feature-icon">📚</span>
+                <span>Загрузка книг: PDF, DOCX, EPUB форматы</span>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">🤖</span>
+                <span>AI анализ структуры с помощью OpenAI GPT-3.5</span>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">🎨</span>
+                <span>3 готовых шаблона дизайна</span>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">✂️</span>
+                <span>Разделение на части с выбором количества (5-50)</span>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">💾</span>
+                <span>Сохранение оригинального текста</span>
+            </div>
+        </div>
+
+        <div class="warning">
+            <strong>⚠️ Для полной функциональности требуется backend сервер</strong><br>
+            GitHub Pages показывает только фронтенд. Для работы с AI и PDF нужно запустить backend локально.
+        </div>
+
+        <div>
+            <a href="https://github.com/dauletimanaliev/splitter_book" class="btn">📁 Исходный код</a>
+            <a href="https://github.com/dauletimanaliev/splitter_book#быстрый-старт" class="btn btn-secondary">🚀 Инструкции</a>
+        </div>
+
+        <div style="margin-top: 30px; padding: 20px; background: #e9ecef; border-radius: 10px;">
+            <h3>🔧 Как запустить локально:</h3>
+            <ol style="text-align: left; display: inline-block;">
+                <li>Клонируйте репозиторий</li>
+                <li>Запустите backend: <code>python main.py</code></li>
+                <li>Запустите frontend: <code>npm start</code></li>
+                <li>Откройте http://localhost:3000</li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>
