@@ -2,6 +2,7 @@
     "name": "ai-book-splitter-frontend",
     "version": "1.0.0",
     "description": "Frontend for AI Book Splitter & Designer",
+    "homepage": "https://dauletimanaliev.github.io/splitter_book",
     "private": true,
     "dependencies": {
         "@testing-library/jest-dom": "^5.16.4",
