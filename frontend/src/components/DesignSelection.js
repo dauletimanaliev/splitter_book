@@ -30,7 +30,7 @@ const DesignPreview = styled.div`
   height: 200px;
   border-radius: 8px;
   margin-bottom: 15px;
-  background: ${props => props.background};
+  background: ${props => props.$background};
   border: 1px solid #ddd;
   position: relative;
   overflow: hidden;
@@ -304,7 +304,7 @@ function DesignSelection({ structure, selectedDesign, onDesignSelect }) {
                 </SelectedBadge>
               )}
               
-              <DesignPreview background={preview.background}>
+              <DesignPreview $background={preview.background}>
                 <PreviewContent>
                   <PreviewTitle
                     fontFamily={preview.titleFont}

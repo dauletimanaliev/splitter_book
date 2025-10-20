@@ -19,6 +19,7 @@ app = FastAPI(title="AI Book Splitter & Designer", version="1.0.0")
 class AnalyzeRequest(BaseModel):
     book_id: str
     split_mode: str = "by_headings"
+    num_sections: int = 5
 
 class GenerateRequest(BaseModel):
     book_id: str
@@ -96,6 +97,7 @@ async def analyze_structure(request: AnalyzeRequest):
     try:
         book_id = request.book_id
         split_mode = request.split_mode
+        num_sections = request.num_sections
         
         text_file = f"temp/{book_id}_text.json"
         
@@ -107,7 +109,7 @@ async def analyze_structure(request: AnalyzeRequest):
             text_data = json.load(f)
         
         # Анализируем структуру с помощью AI
-        structure = ai_analyzer.analyze_structure(text_data, split_mode)
+        structure = ai_analyzer.analyze_structure(text_data, split_mode, num_sections)
         
         # Сохраняем структуру
         structure_file = f"temp/{book_id}_structure.json"

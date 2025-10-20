@@ -135,14 +135,14 @@ function App() {
     }
   };
 
-  const handleStructureAnalysis = async (splitMode = 'by_headings') => {
+  const handleStructureAnalysis = async (splitMode = 'by_headings', numSections = 5) => {
     if (!bookData) return;
     
     setLoading(true);
     setError(null);
     
     try {
-      const response = await apiService.analyzeStructure(bookData.book_id, splitMode);
+      const response = await apiService.analyzeStructure(bookData.book_id, splitMode, numSections);
       console.log('API Response:', response.data);
       // Устанавливаем только структуру из ответа
       setStructure(response.data.structure || response.data);

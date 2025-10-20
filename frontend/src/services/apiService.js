@@ -56,13 +56,15 @@ class ApiService {
    * Анализ структуры книги
    * @param {string} bookId - ID книги
    * @param {string} splitMode - Режим разделения
+   * @param {number} numSections - Количество разделов
    * @returns {Promise} - Ответ сервера
    */
-  async analyzeStructure(bookId, splitMode = 'by_headings') {
+  async analyzeStructure(bookId, splitMode = 'by_headings', numSections = 5) {
     try {
       const response = await api.post('/analyze', {
         book_id: bookId,
         split_mode: splitMode,
+        num_sections: numSections,
       });
       return response;
     } catch (error) {

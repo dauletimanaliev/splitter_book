@@ -34,6 +34,43 @@ const AnalysisOptions = styled.div`
   margin-bottom: 20px;
 `;
 
+const SectionCountSelector = styled.div`
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+`;
+
+const SectionCountLabel = styled.label`
+  display: block;
+  font-weight: bold;
+  color: #856404;
+  margin-bottom: 10px;
+`;
+
+const SectionCountGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  gap: 8px;
+`;
+
+const SectionCountOption = styled.button`
+  padding: 8px 12px;
+  border: 2px solid ${props => props.selected ? '#007bff' : '#e9ecef'};
+  border-radius: 6px;
+  background: ${props => props.selected ? '#007bff' : 'white'};
+  color: ${props => props.selected ? 'white' : '#495057'};
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    border-color: #007bff;
+    background: ${props => props.selected ? '#007bff' : '#f8f9ff'};
+  }
+`;
+
 const OptionGroup = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -127,6 +164,9 @@ const Spinner = styled.div`
 function StructureAnalysis({ bookData, onAnalyze, loading }) {
   const [selectedMode, setSelectedMode] = useState('by_headings');
   const [analysisResult, setAnalysisResult] = useState(null);
+  const [numSections, setNumSections] = useState(5);
+
+  const sectionCountOptions = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50];
 
   const analysisModes = [
     {
@@ -157,7 +197,7 @@ function StructureAnalysis({ bookData, onAnalyze, loading }) {
 
   const handleAnalyze = async () => {
     try {
-      const result = await onAnalyze(selectedMode);
+      const result = await onAnalyze(selectedMode, numSections);
       setAnalysisResult(result);
     } catch (error) {
       console.error('Ошибка анализа:', error);
@@ -210,6 +250,21 @@ function StructureAnalysis({ bookData, onAnalyze, loading }) {
             );
           })}
         </OptionGroup>
+
+        <SectionCountSelector>
+          <SectionCountLabel>Количество разделов:</SectionCountLabel>
+          <SectionCountGrid>
+            {sectionCountOptions.map((count) => (
+              <SectionCountOption
+                key={count}
+                selected={numSections === count}
+                onClick={() => setNumSections(count)}
+              >
+                {count}
+              </SectionCountOption>
+            ))}
+          </SectionCountGrid>
+        </SectionCountSelector>
 
         <button
           className="btn btn-primary"
